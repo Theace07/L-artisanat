@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/Global.css">
+    <title>L'artisanat</title>
+    <script src="https://kit.fontawesome.com/9b8ce6708a.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <header>
+    <nav>
+      <button class="hamburger"><i class="fa-solid fa-bars"></i></button>
+      <ul class="listContainer">
+        <li><a href="#">Home</a></li>
+        <li><a href="./pages/Nosotros.html">Nosotros</a></li>
+        <li><a href="./pages/Productos.html">Productos</a></li>
+        <li><a href="./pages/Servicio.html">Servicio al Cliente</a></li>
+        <li><a href="./pages/Mi pedido.html">Mi pedido</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div >
+      <h1 >L'artisanat</h1>
+      <section class="container">
+      <p>
+        Explora el mundo de la creatividad en L'artisanat, tu destino para encontrar obras de arte únicas que transformarán tu espacio. Desde pinturas vibrantes hasta esculturas elegantes, ofrecemos una amplia variedad de productos artísticos para todos los amantes del arte.
+      </p>
+      <img src="./assets/34.webp" alt="34" class="image">
+    </div>
+  </section>
+    <section class="product-section">
+      <div class="product-info">
+        <h2>L'artisanat
+        </h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vel quam non nisi faucibus commodo.
+          Vivamus varius laoreet lorem, nec gravida dui sollicitudin vel. Integer aliquet nulla eu nulla
+          ultricies scelerisque.
+        </p>
+        <p>
+          Ut eget nibh ut lectus efficitur euismod vel nec felis. Sed euismod ipsum non neque facilisis,
+          vel malesuada metus bibendum. Integer id libero ut lacus euismod semper.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, nulla ratione. Ut repellendus amet aliquam adipisci velit a odit, reprehenderit quidem. Nostrum illo nesciunt deserunt quae esse saepe est amet!
+        </p>
+      </div>
+      <div class="product-image">
+
+      </div>
+    </section>
+  </main>
+
+
+  <footer>
+    <div class="social-links">
+      <a href="#" target="_blank">Instagram</a>
+      <a href="#" target="_blank">Facebook</a>
+      <a href="https://wa.me/123456789" target="_blank">WhatsApp</a>
+    </div>
+  </footer>
+</body>
+<script>
+  document.querySelector('.hamburger').addEventListener('click', function() {
+    let icon = document.querySelector('.hamburger i');
+    let list = document.querySelector('.listContainer');
+    list.classList.toggle('active');
+
+    if (list.classList.contains('active')) {
+      icon.classList.remove('fa-bars');
+      icon.classList.add('fa-times');
+    } else {
+      icon.classList.remove('fa-times');
+      icon.classList.add('fa-bars');
+    }
+  });
+</script>
+</html>
