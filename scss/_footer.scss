@@ -1,0 +1,15 @@
+&__footer{
+    footer {
+        background-color: #5e6961;
+        padding: 10px;
+      }
+      .social-links {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+      }
+      .social-links a {
+        text-decoration: none;
+        color: #000000;
+      }
+}
