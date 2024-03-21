@@ -4,9 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/Global.css">
-    <link rel="stylesheet" href="./css/slideshow.css"> <!-- Agrega el archivo CSS para el slideshow -->
     <title>L'artisanat</title>
-    <script src="https://kit.fontawesome.com/9b8ce6708a.js" crossorigin="anonymous"></script>
 </head>
 <body>
   <header>
@@ -21,19 +19,6 @@
       </ul>
     </nav>
   </header>
-
-  <!-- Agrega el slideshow aquí -->
-  <div class="slideshow-container">
-    <div class="slide">
-      <img src="./assets/slide1.jpg" alt="Slide 1">
-      <div class="description">Descripción del Slide 1</div>
-    </div>
-    <div class="slide">
-      <img src="./assets/slide2.jpg" alt="Slide 2">
-      <div class="description">Descripción del Slide 2</div>
-    </div>
-    <!-- Agrega más slides según sea necesario -->
-  </div>
 
   <main>
     <div >
@@ -74,21 +59,6 @@
     </div>
   </footer>
 
-  <script src="./js/slideshow.js"></script> <!-- Agrega el archivo JavaScript para el slideshow -->
-  <script>
-    document.querySelector('.hamburger').addEventListener('click', function() {
-      let icon = document.querySelector('.hamburger i');
-      let list = document.querySelector('.listContainer');
-      list.classList.toggle('active');
-
-      if (list.classList.contains('active')) {
-        icon.classList.remove('fa-bars');
-        icon.classList.add('fa-times');
-      } else {
-        icon.classList.remove('fa-times');
-        icon.classList.add('fa-bars');
-      }
-    });
-  </script>
+  
 </body>
 </html>
