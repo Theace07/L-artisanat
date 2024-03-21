@@ -258,3 +258,31 @@
       margin-top: 20px;
   }
     }
+    /* .slideshow-container {
+    position: relative;
+    width: 100%;
+    max-width: 800px; 
+    margin: auto;
+  }
+  
+  .slide {
+      display: none; 
+  }
+  
+  img {
+      width: 100%;
+      height: auto;
+  }
+  
+  .description {
+      position: absolute;
+      bottom: 10px;
+      left: 0;
+      right: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      padding: 10px;
+      text-align: center;
+      font-size: 16px;
+  }
+  /*
