@@ -1,0 +1,30 @@
+.testimonials-section {
+    width: 50%;
+    margin: 0 auto;
+    h2 {
+        text-align: center;
+        color: #333;
+        font-size: 2em;
+        margin-bottom: 1em;
+    }
+
+    .testimonial {
+        background-color: #f9f9f9;
+        border-radius: 5px;
+        padding: 2em;
+        margin-bottom: 1em;
+
+        p {
+            font-size: 1em;
+            color: #666;
+        }
+
+        .stars {
+            margin: 1em 0;
+
+            i {
+                color: #fdbc3b;
+            }
+        }
+    }
+}

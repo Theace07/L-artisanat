@@ -1,43 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/Global.css">
-    <link rel="stylesheet" href="../css/Mi Pedido.css">
-    <script src="https://kit.fontawesome.com/9b8ce6708a.js" crossorigin="anonymous"></script>
-    <title>Mi pedido</title>
-    
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/Global.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="../scss/styles.css">
+  <script src="https://kit.fontawesome.com/9b8ce6708a.js" crossorigin="anonymous"></script>
+  <title>Mi pedido</title>
+
 </head>
+
 <body>
-    <header>
-    <nav >
+  <header>
+    <nav>
       <button class="hamburger"><i class="fa-solid fa-bars"></i></button>
-        <ul class="listContainer">
-          <li><a href="../index.html">Home</a></il>
-          <li><a href="./Nosotros.html">Nosotros</a></li>
-          <li><a href="./Productos.html">Productos</a></li>
-          <li><a href="./Servicio.html">Servicio al Cliente</a></li>
-          <li><a href="./Mi pedido.html">Mi pedido</a></li>
-        </ul>
-      </nav>
-      
-      <main>
-        <div>
-          <p>Alerta pagina en mantenimiento por favor comuniquese con nosotros por nuestras redes sociales si esta interesado en alguno de nuestros productos</p>
+      <ul class="listContainer">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="./Nosotros.html">Nosotros</a></li>
+        <li><a href="./Productos.html">Productos</a></li>
+        <li><a href="./Servicio.html">Servicio al Cliente</a></li>
+        <li><a href="./Mi pedido.html">Mi pedido</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <div class="col-12 text-center">
+        <h2>Mi Carrito</h2>
+        <h3 class="totalValue"> </h3>
+      </div>
+      <div class="container">
+        <div class="row">
         </div>
-      </main>
-      <footer>
-        <div class="social-links">
-          <a href="https://www.instagram.com/lartisanat74/" target="_blank">Instagram</a>
-          <a href="https://www.facebook.com/profile.php?id=61551809855201" target="_blank">Facebook</a>
-          <a href="https://wa.me/123456789" target="_blank">WhatsApp</a>
+        <div class="row justify-content-center">
+          <div class="col-sm-4">
+            <div class="card h-100">
+              <img src="../assets/11.webp" class="card-img-top" alt="Florero_Botella">
+              <div class="card-body">
+                <h3 class="card-title">Florero Botella</h3>
+                <p class="card-text">Precio: $100</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="card h-100">
+              <img src="../assets/16.webp" class="card-img-top" alt="Pintura_2">
+              <div class="card-body">
+                <h3 class="card-title">Cuadro</h3>
+                <p class="card-text">Precio: $150</p>
+              </div>
+            </div>
+          </div>
+          <!-- <div class="col-sm-4">
+            <div class="card h-100">
+              <img src="../assets/16.webp" class="card-img-top" alt="Pintura_2">
+              <div class="card-body">
+                <h3 class="card-title">Cuadro</h3>
+                <p class="card-text">Precio: $150</p>
+              </div>
+            </div>
+          </div> -->
+          <!-- Agrega más productos aquí -->
         </div>
-      </footer>
-    </header>
+      </div>
+
+    </main>
+    <footer>
+      <div class="social-links">
+        <a href="https://www.instagram.com/lartisanat74/" target="_blank">Instagram</a>
+        <a href="https://www.facebook.com/profile.php?id=61551809855201" target="_blank">Facebook</a>
+        <a href="https://wa.me/123456789" target="_blank">WhatsApp</a>
+      </div>
+    </footer>
+  </header>
 </body>
 <script>
-  document.querySelector('.hamburger').addEventListener('click', function() {
+  // Obtén todos los elementos de precio en el carrito
+  let prices = document.querySelectorAll('.card-text');
+
+  // Inicializa una variable para almacenar el total
+  let total = 0;
+
+  // Itera sobre cada elemento de precio
+  prices.forEach(priceElement => {
+    // Obtiene el precio como un número (elimina el signo de dólar y convierte el string a un número)
+    let price = Number(priceElement.textContent.replace('Precio: $', ''));
+
+    // Suma el precio al total
+    total += price;
+  });
+
+  // Crea un nuevo elemento de párrafo para mostrar el total
+  let totalElement = document.querySelector('.totalValue');
+  totalElement.textContent = 'Total a pagar: $' + total;
+
+  // Agrega el elemento de total al final de la lista de elementos del carrito
+
+
+
+  document.querySelector('.hamburger').addEventListener('click', function () {
     let icon = document.querySelector('.hamburger i');
     let list = document.querySelector('.listContainer');
     list.classList.toggle('active');
@@ -51,4 +114,5 @@
     }
   });
 </script>
+
 </html>

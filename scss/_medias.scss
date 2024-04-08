@@ -1,4 +1,4 @@
-&__medias{
+
     @media (max-width: 600px) {
         .listContainer {
           display: box;
@@ -6,7 +6,7 @@
         .mobile-nav {
           display: block;
         }
-}}
+}
 @media (min-width: 600px) {
     .listContainer {
       flex-direction: row;

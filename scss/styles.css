@@ -4,6 +4,67 @@
   box-sizing: border-box;
 }
 
+header {
+  background-color: #f2f5ec;
+  padding: 15px;
+  position: sticky;
+  z-index: 1000;
+}
+
+nav {
+  margin: 15px;
+  color: black;
+  font-style: italic;
+}
+
+main {
+  background-color: #bdc3ba;
+  padding: 15px;
+}
+
+footer {
+  background-color: #5e6961;
+  padding: 10px;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.social-links a {
+  text-decoration: none;
+  color: #000000;
+}
+
+.testimonials-section {
+  width: 50%;
+  margin: 0 auto;
+}
+.testimonials-section h2 {
+  text-align: center;
+  color: #333;
+  font-size: 2em;
+  margin-bottom: 1em;
+}
+.testimonials-section .testimonial {
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  padding: 2em;
+  margin-bottom: 1em;
+}
+.testimonials-section .testimonial p {
+  font-size: 1em;
+  color: #666;
+}
+.testimonials-section .testimonial .stars {
+  margin: 1em 0;
+}
+.testimonials-section .testimonial .stars i {
+  color: #fdbc3b;
+}
+
 .aboutUs {
   margin: 14px;
 }
@@ -73,31 +134,91 @@
   }
 }
 
-.commentContainer {
-  margin: 20px auto;
-  padding: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  flex-wrap: wrap;
+main {
+  padding: 2em;
 }
-.commentContainer .comment {
+main .commentContainer .comments-section h1 {
+  text-align: center;
+  color: #333;
+}
+main .commentContainer .comments-section p {
+  text-align: center;
+  color: #666;
+}
+main .commentContainer .comments-section #comment-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+main .commentContainer .comments-section #comment-form textarea {
+  width: 100%;
+  height: 100px;
+}
+main .commentContainer .comments-section #comment-form button {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 1em;
+  cursor: pointer;
+}
+main .commentContainer .comments-section__listContainer {
+  margin-top: 2em;
+}
+main .commentContainer .comments-section__listContainer h2 {
+  text-align: center;
+  color: #333;
+}
+main .commentContainer .comments-section__listContainer .comment {
   background-color: #f0f0f0;
   padding: 10px;
   margin-bottom: 10px;
   margin-top: 20px;
 }
-.commentContainer .comments-section__listContainer {
-  padding-top: 20px;
-}
-@media screen and (max-width: 608px) {
-  .commentContainer .comments-section__listContainer {
-    margin: 0 auto;
-  }
-}
-.commentContainer .comments-section__listContainer .comments-list {
+main .commentContainer .comments-section__listContainer .comments-list {
   height: 200px;
   overflow-y: auto;
   width: 200px;
   text-align: center;
+}
+
+main .card {
+  display: flex;
+  flex-direction: column;
+}
+main .card-body {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+main .card-text {
+  width: 100%;
+}
+
+@media (max-width: 600px) {
+  .listContainer {
+    display: box;
+  }
+  .mobile-nav {
+    display: block;
+  }
+}
+@media (min-width: 600px) {
+  .listContainer {
+    flex-direction: row;
+    justify-content: center;
+  }
+  .content-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (min-width: 800px) {
+  .content-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+.product-section {
+  display: flex;
+  align-items: center;
+  padding: 20px;
 }/*# sourceMappingURL=styles.css.map */
